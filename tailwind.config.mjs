@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,5 +14,24 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
+  daisyui: {
+    themes: [
+      {
+        dark : {
+          ...require("daisyui/src/theming/themes")["dark"],
+          "--primary": "#ffffff",
+          ".menu li > *:not(ul):not(.menu-title):not(details)": {
+            "margin-bottom": "12px;",
+            "height": "40px;",
+          },
+          ".menu li > *:not(ul):not(.menu-title):not(details).active": {
+            "background-color": "var(--primary);"
+          },
+        },
+      },  
+    ],
+  },
 };
