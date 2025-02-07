@@ -15,7 +15,31 @@ html, body {
   --foreground: #171717;
 }
 
-#sidebar {
+.grid-area-1 {
+  grid-area: 1 / 1;
+}
+
+.primary-bg {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.primary-bg:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  opacity: 75%;
+}
+
+.btn-primary {
+  @apply primary-bg;
+}
+
+.hero {
+  @apply place-items-start;
+  @apply justify-center
+}
+
+#sidebar-wrapper {
   transition: width 0.125s;
 }
 

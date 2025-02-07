@@ -22,13 +22,16 @@ export default {
       {
         dark : {
           ...require("daisyui/src/theming/themes")["dark"],
-          "--primary": "#ffffff",
+          "--primary": "#09BC8A",
+          "--secondary": "#004346",
           ".menu li > *:not(ul):not(.menu-title):not(details)": {
             "margin-bottom": "12px;",
             "height": "40px;",
           },
           ".menu li > *:not(ul):not(.menu-title):not(details).active": {
-            "background-color": "var(--primary);"
+            "background-color": "var(--primary);",
+            "color": "#000000",
+            "font-weight": "600",
           },
         },
       },  
